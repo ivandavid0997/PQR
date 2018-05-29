@@ -6,7 +6,7 @@ class SolicitudsController < ApplicationController
   # GET /solicituds
   # GET /solicituds.json
   def index
-    @solicituds = Solicitud.all
+    @solicituds = current_login.solicituds.all
   end
 
   # GET /solicituds/1

@@ -4,4 +4,5 @@ class Login < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
    has_many :solicituds
+   belongs_to :role
 end
