@@ -1,6 +1,8 @@
 class SolicitudsController < ApplicationController
   before_action :set_solicitud, only: [:show, :edit, :update, :destroy]
 
+  before_action :authenticate_login!
+
   # GET /solicituds
   # GET /solicituds.json
   def index
@@ -62,6 +64,13 @@ class SolicitudsController < ApplicationController
   end
 
   private
+
+    def validate_login
+      redirect_to new_login_session_path, notice: "debes iniciar sesion"
+      
+    end
+
+
     # Use callbacks to share common setup or constraints between actions.
     def set_solicitud
       @solicitud = Solicitud.find(params[:id])
