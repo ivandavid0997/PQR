@@ -19,9 +19,22 @@
           <li class="col-md">
             <%= link_to "Inicio", "/" %>
           </li>
-          <li class="col-md"><%= link_to "Roles","roles/index",method: :post %></li>
-          <li class="col-md"> <%= link_to "Registro","users/index",method: :post %></li>
-          <li class="col-md"><%= link_to "PQR","solicituds/index",method: :post %></li>
+          
+          <li class="col-md"> Diseño </li>
+          <li class="col-md">Contacto</li>
+          <div class="btn-group">
+  <button type="button" class="btn btn-default btn-sm dropdown-toggle"
+          data-toggle="dropdown">
+    Opciones <span class="caret"></span>
+  </button>
+ 
+  <ul class="dropdown-menu" role="menu">
+    <li class="btn btn-primary btn-xs"> <%= link_to "Roles","roles/index",method: :post%> </li>
+    <li class="btn btn-primary btn-xs"><%= link_to "Registro","users/index",method: :post %></li>
+    <li class="btn btn-primary btn-xs"><%= link_to "PQR","solicituds/index",method: :post %></li>
+    
+  </ul>
+</div>
         </ul>
       </nav>
     </header>
