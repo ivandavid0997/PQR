@@ -1,2 +1,3 @@
 class Parametro < ApplicationRecord
+
 end

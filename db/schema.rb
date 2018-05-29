@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_29_191917) do
+ActiveRecord::Schema.define(version: 2018_05_29_202628) do
 
   create_table "adjuntos", force: :cascade do |t|
     t.string "nombre"
@@ -88,6 +88,8 @@ ActiveRecord::Schema.define(version: 2018_05_29_191917) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "login_id"
+    t.integer "adjunto_id"
+    t.index ["adjunto_id"], name: "index_solicituds_on_adjunto_id"
     t.index ["login_id"], name: "index_solicituds_on_login_id"
   end
 
