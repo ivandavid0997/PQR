@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_29_205817) do
+ActiveRecord::Schema.define(version: 2018_05_29_211603) do
 
   create_table "adjuntos", force: :cascade do |t|
     t.string "nombre"
@@ -78,6 +78,8 @@ ActiveRecord::Schema.define(version: 2018_05_29_205817) do
     t.integer "id_tipo_seguimiento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "tipo_seguimiento_id"
+    t.index ["tipo_seguimiento_id"], name: "index_seguimientos_on_tipo_seguimiento_id"
   end
 
   create_table "solicituds", force: :cascade do |t|
