@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @parametro.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @parametro.descripcion %>
+</p>
+
+<p>
+  <strong>Tiempo respuesta:</strong>
+  <%= @parametro.tiempo_respuesta %>
+</p>
+
+<p>
+  <strong>Medio:</strong>
+  <%= @parametro.medio %>
+</p>
+
+<%= link_to 'Edit', edit_parametro_path(@parametro) %> |
+<%= link_to 'Back', parametros_path %>

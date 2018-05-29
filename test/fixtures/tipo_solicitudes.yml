@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_tipo: MyString
+  id_parametros: 1
+
+two:
+  nombre_tipo: MyString
+  id_parametros: 1

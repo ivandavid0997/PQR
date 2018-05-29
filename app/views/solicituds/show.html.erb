@@ -1,0 +1,37 @@
+<%- model_class = Solicitud -%>
+
+
+
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+
+  <p>
+ Escrito por: <%= @solicitud.login.email %> 
+</p>
+  
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:descripcion) %>:</strong></dt>
+  <dd><%= @solicitud.descripcion %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:fecha_solicitud) %>:</strong></dt>
+  <dd><%= @solicitud.fecha_solicitud %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:hora) %>:</strong></dt>
+  <dd><%= @solicitud.hora %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idtipo_solicitud) %>:</strong></dt>
+  <dd><%= @solicitud.idtipo_solicitud %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:id_usuario) %>:</strong></dt>
+  <dd><%= @solicitud.id_usuario %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:id_documento) %>:</strong></dt>
+  <dd><%= @solicitud.id_documento %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              solicituds_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_solicitud_path(@solicitud), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              solicitud_path(@solicitud),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

@@ -1,0 +1,22 @@
+<%= form_with(model: tipo_seguimiento, local: true) do |form| %>
+  <% if tipo_seguimiento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tipo_seguimiento.errors.count, "error") %> prohibited this tipo_seguimiento from being saved:</h2>
+
+      <ul>
+      <% tipo_seguimiento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

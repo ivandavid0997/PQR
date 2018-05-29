@@ -1,0 +1,69 @@
+<%= form_for @solicitud, :html => { :class => "form-horizontal solicitud" } do |f| %>
+
+  <% if @solicitud.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@solicitud.errors.count, "error") %> prohibited this solicitud from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @solicitud.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :descripcion, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :descripcion, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:descripcion) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :fecha_solicitud, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :fecha_solicitud, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:fecha_solicitud) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hora, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hora, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hora) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :idtipo_solicitud, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :idtipo_solicitud, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:idtipo_solicitud) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :id_usuario, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :id_usuario, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:id_usuario) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :id_documento, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :id_documento, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:id_documento) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                solicituds_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @adjunto.nombre %>
+</p>
+
+<p>
+  <strong>Extension:</strong>
+  <%= @adjunto.extension %>
+</p>
+
+<%= link_to 'Edit', edit_adjunto_path(@adjunto) %> |
+<%= link_to 'Back', adjuntos_path %>

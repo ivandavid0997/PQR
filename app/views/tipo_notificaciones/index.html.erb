@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tipo Notificaciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Icono</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipo_notificaciones.each do |tipo_notificacione| %>
+      <tr>
+        <td><%= tipo_notificacione.nombre %></td>
+        <td><%= tipo_notificacione.descripcion %></td>
+        <td><%= tipo_notificacione.icono %></td>
+        <td><%= link_to 'Show', tipo_notificacione %></td>
+        <td><%= link_to 'Edit', edit_tipo_notificacione_path(tipo_notificacione) %></td>
+        <td><%= link_to 'Destroy', tipo_notificacione, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tipo Notificacione', new_tipo_notificacione_path %>

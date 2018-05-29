@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descripcion: MyText
+  fecha_solicitud: 2018-05-26
+  hora: 2018-05-26 13:12:01
+  idtipo_solicitud: 1
+  id_usuario: 1
+  id_documento: 1
+
+two:
+  descripcion: MyText
+  fecha_solicitud: 2018-05-26
+  hora: 2018-05-26 13:12:01
+  idtipo_solicitud: 1
+  id_usuario: 1
+  id_documento: 1

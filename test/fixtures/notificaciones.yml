@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mensaje: MyText
+  fecha: 2018-05-27 00:03:56
+  id_tipo_notificacion: 1
+
+two:
+  mensaje: MyText
+  fecha: 2018-05-27 00:03:56
+  id_tipo_notificacion: 1

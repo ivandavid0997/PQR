@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_rol: MyString
+  id_area: 1
+  id_usuario: 1
+
+two:
+  nombre_rol: MyString
+  id_area: 1
+  id_usuario: 1

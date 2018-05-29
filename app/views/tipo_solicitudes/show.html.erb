@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre tipo:</strong>
+  <%= @tipo_solicitude.nombre_tipo %>
+</p>
+
+<p>
+  <strong>Id parametros:</strong>
+  <%= @tipo_solicitude.id_parametros %>
+</p>
+
+<%= link_to 'Edit', edit_tipo_solicitude_path(@tipo_solicitude) %> |
+<%= link_to 'Back', tipo_solicitudes_path %>

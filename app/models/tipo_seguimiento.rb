@@ -1,0 +1,2 @@
+class TipoSeguimiento < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class TipoSolicitude < ApplicationRecord
+end
