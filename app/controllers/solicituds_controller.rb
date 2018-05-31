@@ -2,11 +2,13 @@ class SolicitudsController < ApplicationController
   before_action :set_solicitud, only: [:show, :edit, :update, :destroy]
 
   before_action :authenticate_login!, except: [:show,:index]
+  #before_action :authenticate_login!
 
   # GET /solicituds
   # GET /solicituds.json
   def index
     @solicituds = current_login.solicituds.all
+    # @solicitud = Solicitud.all
   end
 
   # GET /solicituds/1

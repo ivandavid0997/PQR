@@ -92,9 +92,7 @@ ActiveRecord::Schema.define(version: 2018_05_29_211603) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "login_id"
-    t.integer "adjunto_id"
     t.integer "tipo_solicitude_id"
-    t.index ["adjunto_id"], name: "index_solicituds_on_adjunto_id"
     t.index ["login_id"], name: "index_solicituds_on_login_id"
     t.index ["tipo_solicitude_id"], name: "index_solicituds_on_tipo_solicitude_id"
   end
